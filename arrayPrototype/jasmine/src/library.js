@@ -29,6 +29,7 @@ toTwenty.prototype.search = function(data) {
 			index = mid;
 			break
 		}
+		
 		count += 1;
     }
 
@@ -137,5 +138,5 @@ for (var i=10; i<=1000; i+=10) {
 	tenToOneThousand.push(i);
 }
 
-console.log(oneToTwenty.search(44));
+console.log(oneToTwenty.search(20));
 
