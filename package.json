@@ -1,0 +1,11 @@
+{
+  "name": "bootcamp-home-day-three",
+  "version": "1.0.0",
+  "description": "Solve the day's exercises and test with Jasmine",
+  "main": "index.js",
+  "scripts": {
+    "test": "tests"
+  },
+  "author": "Richard Terungwa Kombol",
+  "license": "ISC"
+}
