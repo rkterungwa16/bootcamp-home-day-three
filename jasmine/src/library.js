@@ -7,10 +7,10 @@ toTwenty.prototype.constructor = toTwenty;
 
 toTwenty.prototype.search = function(data) {
 
-	var mObj = { 'count': 0, 'index': 0, 'length': 0 };
 	var upperBound = this.length-1;
     var lowerBound = 0;
     var count = 0;
+    var index;
     var mObj = {};
 
     while (lowerBound <= upperBound) {
@@ -24,14 +24,16 @@ toTwenty.prototype.search = function(data) {
 			upperBound = mid - 1;
 		}
 
-		else {
-			break;
-		}
+		else if (this[mid] === data) {
 
+			index = mid;
+			break
+		}
 		count += 1;
     }
+
     mObj['count'] = count;
-    mObj['index'] = mid;
+    mObj['index'] = index;
     mObj['length'] = this.length;
     return mObj;
 
@@ -52,8 +54,6 @@ toForty.prototype = Object.create(Array.prototype);
 toForty.prototype.constructor = toForty;
 
 toForty.prototype.search = function(data) {
-
-	var mObj = { 'count': 0, 'index': 0, 'length': 0 };
 	var upperBound = this.length-1;
     var lowerBound = 0;
     var count = 0;
@@ -99,7 +99,6 @@ toOneThousand.prototype.constructor = toOneThousand;
 
 toOneThousand.prototype.search = function(data) {
 
-	var mObj = { 'count': 0, 'index': 0, 'length': 0 };
 	var upperBound = this.length-1;
     var lowerBound = 0;
     var count = 0;
@@ -122,6 +121,7 @@ toOneThousand.prototype.search = function(data) {
 
 		count += 1;
     }
+
     mObj['count'] = count;
     mObj['index'] = mid;
     mObj['length'] = this.length;
@@ -137,5 +137,5 @@ for (var i=10; i<=1000; i+=10) {
 	tenToOneThousand.push(i);
 }
 
-
+console.log(oneToTwenty.search(44));
 
